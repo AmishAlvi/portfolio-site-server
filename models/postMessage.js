@@ -5,16 +5,8 @@ const postSchema = mongoose.Schema({
     description: String,
     tags: [String],
     selectedFile: String,
-    gitURL: {
-        type: String,
-        required: 'URL can\'t be empty',
-        unique: true
-    },
-    deploymentURL: {
-        type: String,
-        required: 'URL can\'t be empty',
-        unique: true
-    },
+    gitURL: String,
+    deploymentURL: String,
     createdAt: {
         type: Date,
         default: new Date()
